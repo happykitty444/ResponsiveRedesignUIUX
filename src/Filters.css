@@ -1,0 +1,49 @@
+.Filters {
+  text-align: center;
+  padding: 1rem;
+}
+
+.filterButton {
+  background-color: #775e37;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: fantasy;
+  transition-duration: 0.4s;
+}
+
+.filterButton:hover {
+  background-color: #2c2216;
+  color: white;
+}
+
+
+
+
+.sortButton {
+  background-color: #f1d5a9;
+  color: #775e37;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: fantasy;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.sortButton:hover {
+  background-color: #bd9c75;
+  color: white;
+}
+
+.sortButton:focus {
+  background: #bd9c75;;
+}

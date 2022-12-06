@@ -1,0 +1,14 @@
+.MainItems {
+  text-align: center
+}
+
+img {
+  border-radius: 5px;
+  max-height: 10rem;
+  max-width: 10rem;
+}
+
+h1 {
+  padding: 2rem;
+  font-size: 5rem;
+}
