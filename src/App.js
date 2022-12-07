@@ -1,13 +1,15 @@
 import './App.css';
 
-import MainItems from './MainItems';
 import Header from './Header';
+import MainItems from './MainItems';
+import Footer from './Footer';
 
 function App() {
   return(
     <div>
       <Header/>
       <MainItems/>
+      <Footer/>
     </div>
   );
 }

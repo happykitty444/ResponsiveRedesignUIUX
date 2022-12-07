@@ -1,20 +1,33 @@
-// A component that displays a single tea item
+import { Col, Row } from 'antd';
 
-function ItemCardSmall(props) {
+import ItemCardSmall from './ItemCardSmall';
+
+function ItemsSection(props) {
 	return (
-		<div class="item-card">
-			{/* image */}
-			<img src={props.item.image} alt={props.item.name}></img>
-			{/* name */}
-			<h2>{props.item.name}</h2>
-			{/* description */}
-			<p>{props.item.description}</p>
-			{/* price */}
-			<h3>${props.item.price}</h3>
-			{/* button */}
-			<button onClick={() => props.addToCart(props.item)}>Add to Cart</button>
+		<div className="items-section">
+			{/* Map items from info to grid */}
+				{props.itemData.map(item => (
+						<div>
+							<ItemCardSmall item={item}></ItemCardSmall>
+						</div>
+				))}
 		</div>
-	)
+	);
 }
-
-export default ItemCardSmall;
+// function ItemsSection(props) {
+// 	return (
+// 		<div className="items-section">
+// 			{/* Map items from info to grid */}
+// 			<Row gutter={16}>
+// 				{props.itemData.map(item => (
+// 					<Col lg={4}>
+// 						<div>
+// 							<ItemCardSmall item={item}></ItemCardSmall>
+// 						</div>
+// 					</Col>
+// 				))}
+// 			</Row>
+// 		</div>
+// 	);
+// }
+export default ItemsSection;

@@ -1,6 +1,5 @@
 import './MainItems.css';
 import { useState } from "react";
-import TeaItem from '/Users/stephanie/Desktop/CS Code 2022/CS1300 UIUX/ResponsiveRedesignUIUX/src/components/TeaItem.js';
 import { Col, Row } from 'antd';
 
 // import the images needed
@@ -17,9 +16,10 @@ import milk from "./assets/images/milk.PNG";
 import orangeJuice from "./assets/images/orangeJuice.PNG";
 import thai from "./assets/images/thai.PNG";
 import ItemCardSmall from './ItemCardSmall';
+import ItemsSection from './ItemsSection';
 
 function MainItems() {
-  const itemData =
+  const itemDataSmall =
     [
       {
         "name": "Red Shoes",
@@ -29,92 +29,68 @@ function MainItems() {
         "price": 20
       },
       {
-        "name": "Hot Chocolate",
-        "description": "Rich dark chocolate made hot with whole milk, topped with whipped cream, cinnamon, and a peppermint stick",
-        "price": 4.99,
-        "image": hotChocolate,
-        "type": "milk",
-        "caffeine": "no"
+        "name": "Red Shoes",
+        "condition": "Used",
+        "distance": 0.1,
+        "image": thai,
+        "price": 20
       },
       {
-        "name": "Milk",
-        "description": "A nice creamy drink served cold. Almond and oat milk available upon request",
-        "price": 1.99,
-        "image": milk,
-        "type": "milk",
-        "caffeine": "no"
+        "name": "Red Shoes",
+        "condition": "Used",
+        "distance": 0.1,
+        "image": thai,
+        "price": 20
+      }
+    ]
+
+    const itemDataRelevant =
+    [
+      {
+        "name": "Blue Shoes",
+        "condition": "Used",
+        "distance": 0.1,
+        "image": thai,
+        "price": 20
       },
       {
-        "name": "Chocolate Milk",
-        "description": "A winter classic served cold for your summer drinking pleasures!",
-        "price": 5.99,
-        "image": choccyMilk,
-        "type": "milk",
-        "caffeine": "no"
+        "name": "Blue Shoes",
+        "condition": "Used",
+        "distance": 0.1,
+        "image": thai,
+        "price": 20
       },
       {
-        "name": "Latte",
-        "description": "A hot drink with a sweet taste",
-        "price": 4.99,
-        "image": latte,
-        "type": "coffee",
-        "caffeine": "yes"
+        "name": "Blue Shoes",
+        "condition": "Used",
+        "distance": 0.1,
+        "image": thai,
+        "price": 20
+      }
+    ]
+
+    const itemDataTop20 =
+    [
+      {
+        "name": "Green Shoes",
+        "condition": "Used",
+        "distance": 0.1,
+        "image": thai,
+        "price": 20
       },
       {
-        "name": "Coffee",
-        "description": "Back to basics. Served black, see counter for topping and mix-ins",
-        "price": 2.99,
-        "image": blackCoffee,
-        "type": "coffee",
-        "caffeine": "yes"
+        "name": "Green Shoes",
+        "condition": "Used",
+        "distance": 0.1,
+        "image": thai,
+        "price": 20
       },
       {
-        "name": "Black Tea",
-        "description": "For caffiene lovers and tea lovers alike, a simple black tea to savor",
-        "price": 2.99,
-        "image": blackTea,
-        "type": "tea",
-        "caffeine": "yes"
-      },
-      {
-        "name": "Earl Grey",
-        "description": "For the tea connoiseurs who prefer less caffiene and a more subdued taste",
-        "price": 3.99,
-        "image": brownTea,
-        "type": "tea",
-        "caffeine": "yes"
-      },
-      {
-        "name": "Mint Tea",
-        "description": "An herbal blend for a natural sleep",
-        "price": 2.99,
-        "image": greenTea,
-        "type": "tea",
-        "caffeine": "no"
-      },
-      {
-        "name": "Lemonade",
-        "description": "For the sweet and sour alike",
-        "price": 3.99,
-        "image": lemonade,
-        "type": "juice",
-        "caffeine": "no"
-      },
-      {
-        "name": "Iced Macchiato",
-        "description": "For the coffee drinkers who prefer a sweet, refreshing taste. Made with rich dark cacao",
-        "price": 6.99,
-        "image": macchiato,
-        "type": "coffee",
-        "caffeine": "yes"
-      },
-      {
-        "name": "Orange Juice",
-        "description": "Great with any breakfast, no pulp",
-        "price": 2.99,
-        "image": orangeJuice,
-        "type": "juice",
-        "caffeine": "no"
+        "name": "Green Shoes",
+        "condition": "Used",
+        "distance": 0.1,
+        "image": thai,
+        "price": 20
       }
     ]
 
@@ -126,26 +102,17 @@ function MainItems() {
         <h2>Shop By Location</h2>
         </div>
 
-        <div className="items-section">
-        {/* Map tea items from info page to grid */}
-        <Row gutter={16}>
-          {itemData.map((item, index) => (
-            <Col lg={4}>
-              <div>
-                <ItemCardSmall item={item}></ItemCardSmall>
-              </div>
-            </Col>
-          ))}
-        </Row>
-        </div>
+        <ItemsSection itemData={itemDataSmall}></ItemsSection>
 
         <h1 className="section-title">Looking For Items Like Yours</h1>
         <h3>Relevant to: </h3>
+        
+        <ItemsSection itemData={itemDataRelevant}></ItemsSection>
 
         <h1 className="section-title">Top 20 Listings</h1>
         <h2>See More Listings</h2>
 
-
+        <ItemsSection itemData={itemDataTop20}></ItemsSection>
 
     </div>
   );

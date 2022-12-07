@@ -35,6 +35,26 @@ h3 {
 }
 
 .items-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   clear:both;
-  padding: 2rem 0rem;
+  padding: 2rem 1rem;
+}
+
+.item-card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color:rgb(0, 0, 0);
+  background-color: rgb(226, 186, 123);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 16px;
+  height: 20rem;
+  width: 20rem;
+}
+
+/* On mouse-over, add a deeper shadow */
+.item-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
