@@ -16,18 +16,17 @@ import macchiato from "./assets/images/macchiato.PNG";
 import milk from "./assets/images/milk.PNG";
 import orangeJuice from "./assets/images/orangeJuice.PNG";
 import thai from "./assets/images/thai.PNG";
+import ItemCardSmall from './ItemCardSmall';
 
 function MainItems() {
   const itemData =
     [
       {
-        "name": "Thai Iced Tea",
-        "description": "Syrup-based tea made with whole milk and iced, a tasy treat for a cold day",
-        "price": 7.99,
+        "name": "Red Shoes",
+        "condition": "Used",
+        "distance": 0.1,
         "image": thai,
-        "quantity": 0,
-        "type": "tea",
-        "caffeine": "yes"
+        "price": 20
       },
       {
         "name": "Hot Chocolate",
@@ -121,20 +120,31 @@ function MainItems() {
 
   return (
     <div className="MainItems">
-      <div>
-        <h1>Tilly's Tea Shop</h1>
 
+        <div>
+        <h1 className="section-title">Listings Near You</h1>
+        <h2>Shop By Location</h2>
+        </div>
+
+        <div className="items-section">
         {/* Map tea items from info page to grid */}
         <Row gutter={16}>
           {itemData.map((item, index) => (
             <Col lg={4}>
               <div>
-                <TeaItem item={item}></TeaItem>
+                <ItemCardSmall item={item}></ItemCardSmall>
               </div>
             </Col>
           ))}
         </Row>
-      </div>
+        </div>
+
+        <h1 className="section-title">Looking For Items Like Yours</h1>
+        <h3>Relevant to: </h3>
+
+        <h1 className="section-title">Top 20 Listings</h1>
+        <h2>See More Listings</h2>
+
 
 
     </div>

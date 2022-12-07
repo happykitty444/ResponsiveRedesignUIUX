@@ -1,5 +1,6 @@
 .MainItems {
-  text-align: center
+  text-align: center;
+  padding: 2rem;
 }
 
 img {
@@ -9,6 +10,31 @@ img {
 }
 
 h1 {
-  padding: 2rem;
-  font-size: 5rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+  float: left;
+}
+
+h2 {
+  color:dodgerblue;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+  text-decoration: underline;
+  float:left;
+}
+
+h3 {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+  float: left;
+  font-size: medium;
+}
+
+.section-title {
+  padding-right: 2rem;
+}
+
+.items-section {
+  clear:both;
+  padding: 2rem 0rem;
 }
