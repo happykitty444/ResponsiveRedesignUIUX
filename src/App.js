@@ -1,16 +1,12 @@
 import './App.css';
 
-import * as React from "react";
-  
-// importing material UI components
-import AppBar from "@mui/material/AppBar";
-
-import background from "./assets/images/DevelopmentBackground.png";
 import MainItems from './MainItems';
+import Header from './Header';
 
 function App() {
   return(
     <div>
+      <Header/>
       <MainItems/>
     </div>
   );

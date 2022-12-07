@@ -11,7 +11,6 @@ function TeaItem(props) {
                 <br/>
                 <b>Category:</b> {props.item.type}</p>
                 <h3>${props.item.price}</h3>
-                <button onClick={() => props.addToCart(props.item)}>Add to Cart</button>
             </div>
         </div>
     )

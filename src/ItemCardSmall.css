@@ -1,0 +1,15 @@
+.ItemCardSmall {
+  text-align: center
+}
+
+.item-card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color:rgba(250, 234, 207, 1);
+  background-color: rgba(175, 153, 113, 0.8);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 16px;
+  min-height: 24rem;
+  width: 12rem;
+}
